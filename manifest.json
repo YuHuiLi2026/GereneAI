@@ -1,0 +1,21 @@
+{
+    "name": "Topic Classifier Extension",
+    "version": "1.0.0",
+    "description": "Classify webpages via topic",
+    "manifest_version": 3,
+    "author": "Matthew Ngoi",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Topic Recommender"
+    },
+    "content_scripts" : [
+        {
+            "matches": ["<all_urls>"],
+            "run_at" : "document_end",
+            "js" : ["content.js"]
+        }
+    ],
+    "permissions": [
+        "bookmarks"
+    ]
+}
